@@ -9,11 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const pool = new Pool({
-    user: "eLearning-user",
-    host: "localhost",
-    database: "eLearning",
-    password: "123",
-    port: 5432,
+    connectionString: "postgres://postgres:123@db:5432/eLearning"
 });
 
 app.get("/api/student_course", async (req, res) => {
